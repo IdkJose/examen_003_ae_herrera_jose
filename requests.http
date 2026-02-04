@@ -1,0 +1,40 @@
+### Salud pública
+GET http://localhost:8080/public/health
+
+### Listar reglas (requiere JWT)
+GET http://localhost:8080/api/rules
+Authorization: Bearer {{jwt}}
+
+### Obtener regla por id (requiere JWT)
+GET http://localhost:8080/api/rules/1
+Authorization: Bearer {{jwt}}
+
+### Crear regla (requiere rol ADMIN)
+POST http://localhost:8080/api/rules
+Authorization: Bearer {{admin_jwt}}
+Content-Type: application/json
+
+{
+  "name": "Regla A",
+  "description": "Descripción",
+  "isActive": true
+}
+
+### Actualizar regla (requiere rol ADMIN)
+PUT http://localhost:8080/api/rules/1
+Authorization: Bearer {{admin_jwt}}
+Content-Type: application/json
+
+{
+  "name": "Regla A2",
+  "description": "Nueva descripción",
+  "isActive": true
+}
+
+### Toggle activo/inactivo (requiere rol ADMIN)
+PATCH http://localhost:8080/api/rules/1/toggle
+Authorization: Bearer {{admin_jwt}}
+
+### Eliminar regla (requiere rol ADMIN)
+DELETE http://localhost:8080/api/rules/1
+Authorization: Bearer {{admin_jwt}}
