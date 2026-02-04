@@ -4,14 +4,14 @@ Microservicio Inventory Config Service con Spring Boot (Kotlin), seguridad con A
 
 ## Requisitos
 
-- Java 17
-- PostgreSQL (u otra BD indicada en clase)
+- Java 21
+- PostgreSQL
 
 ## Variables de entorno
 
-- DB_URL: URL JDBC de la base de datos
-- DB_USERNAME: usuario de la base de datos
-- DB_PASSWORD: contraseña de la base de datos
+- DATABASE_URL: URL JDBC de la base de datos (default: jdbc:postgresql://localhost:5432/examen_arquitectura)
+- DATABASE_USERNAME: usuario de la base de datos (default: postgres)
+- DATABASE_PASSWORD: contraseña de la base de datos (default: admin)
 - COGNITO_ISSUER_URI: issuer-uri del User Pool de Cognito
 - SERVER_PORT (opcional): puerto del servicio, por defecto 8080
 
